@@ -1,0 +1,153 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js?ver=1.8.1"></script>
+<link href="https://fonts.googleapis.com/css?family=Fira+Sans:400,700|Neuton:400,400i" rel="stylesheet">
+<link rel="stylesheet" href="https://anandchowdhary.github.io/ionicons-3-cdn/icons.css" integrity="sha384-+iqgM+tGle5wS+uPwXzIjZS5v6VkqCUV7YQ/e/clzRHAxYbzpUJ+nldylmtBWCP0" crossorigin="anonymous">
+<link rel="stylesheet" href="gridset.css">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<style>
+	body { text-rendering: optimizeLegibility; padding: 0; background-color: #f9f9f9; position: relative; word-wrap: break-word; -webkit-text-size-adjust: none; -webkit-overflow-scrolling: touch; font-family: "Neuton", serif; font-size: 16px; line-height: 1.5; font-smoothing: antialiased; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; color: #4c4c4c }
+	#mobileMast, #bottombar { z-index: 9999; background: #fff; height: 45px; position: fixed; left: 0; right: 0; box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.05); color: #a1a1a1; }
+	#mobileMast { border-bottom: 1px solid #e2e2e2; top: 0 }
+	#mobileMast .col-3 { font-size: 22px; margin-top: 10px }
+	#bottombar { border-top: 1px solid #e2e2e2; bottom: 0; }
+	#bottombar span { font-size: 11px; text-transform: capitalize; font-family: sans-serif }
+	#bottombar i { font-size: 20px; margin-top: 5px; margin-bottom: 2px; display: block; }
+	.entry-content { font: 20px/27px "Neuton", serif }
+	a { color: #006aa4 }
+	.kicker { color: #006aa4; font: 13px "Fira Sans", sans-serif; line-height: 1; margin: 0 0 8px; display: block; text-transform: uppercase; white-space: nowrapl font-weight: bold; }
+	article header { position: relative; padding: 20px 0 0; margin: auto auto 35px; margin-bottom: 15px }
+	article header h1 { font-size: 21px; line-height: 27px; font-family: "Fira Sans", sans-serif; margin-bottom: 0; font-weight: bold }
+	@media (min-width: 768px) {
+		article header h1 { font: 42px/50px "Fira Sans", sans-serif; font-weight: bold }
+		.kicker { font: 15px "Fira Sans", sans-serif; font-weight: bold }
+		.entry-content { font: 22px/30px "Neuton", serif }
+		.article-hero-image { margin: 45px 0 } 
+	}
+	#masthead { font-family: "Fira Sans", sans-serif; background: #fff; padding: 20px; border-bottom: 1px solid #e2e2e2; color: #999 }
+	#masthead nav li { display: inline-block; }
+	#masthead nav ul { margin: 0; padding: 0; list-style: none; white-space: nowrap; overflow-x: auto; }
+	#masthead nav a { font-size: 130%; margin-right: 35px; color: inherit; }
+	#masthead nav a:hover { text-decoration: none; }
+	.entry-content strong, .entry-content b { font-family: "Fira Sans", sans-serif; font-size: 83%; margin: 0 2px; line-height: 1.6 }
+	p:not(:last-child) { margin-bottom: 1.5rem }
+	.entry-sidebar { font-family: "Fira Sans", sans-serif; font-size: 90% }
+	.entry-sidebar strong { font-size: 110%; color: #666 }
+	blockquote { color: #006aa4; margin: 30px 30px 40px 30px; font-size: 115%; font-style: italic; position: relative; text-align: center; }
+	blockquote::before { content: "\201C"; position: absolute; top: 10px; left: -50px; font-size: 96px }
+	blockquote::after { content: "\201D"; position: absolute; bottom: -15px; right: -50px; font-size: 96px }
+	a.science:hover { color: hsl(14, 100%, 53%) !important }
+	a.entrepreneurship:hover { color: orange !important }
+	a.arts:hover { color: hsl(141, 71%,	48%) !important }
+	a.impact:hover { color: hsl(171, 100%, 41%) !important }
+	a.sports:hover { color: hsl(217, 71%, 53%) !important }
+	a.humans:hover { color: hsl(271, 100%, 71%) !important }
+	a.campaigns:hover { color: hsl(348, 100%, 61%) !important }
+	a.events:hover { color: #444 !important }
+	.article-hero-image { background: #aaa; height: 75vh; background-size: cover; max-width: 1600px; margin-left: auto; margin-right: auto }
+	img { max-width: 100% }
+	@media (max-width: 768px) {
+		blockquote::after { display: none; }
+		blockquote::before { left: -50px }
+		blockquote { margin-right: 0; text-align: left; margin-left: 40px; margin-bottom: 35px }
+		article .container { padding-left: 25px; padding-right: 25px; }
+		#content { margin: 45px 0; }
+		.article-hero-image { height: 50vw }
+	}
+</style>
+<header id="masthead" class="hidden-md-down">
+	<div class="container-fluid">
+		<div class="row mb-3">
+			<div class="col-md-3">
+				<a href="/" title="Chaaipani Home">
+					<img alt="Chaaipani" src="https://chaaipani.com/wp-content/uploads/2016/07/logo.png">
+				</a>
+			</div>
+			<div class="col-md-9">3</div>
+		</div>
+		<nav class="sections-nav">
+			<ul>
+				<li><a class="impact" href="#">Impact</a></li>
+				<li><a class="entrepreneurship" href="#">Entrepreneurship</a></li>
+				<li><a class="arts" href="#">Arts &amp; Culture</a></li>
+				<li><a class="science" href="#">Science</a></li>
+				<li><a class="sports" href="#">Sports</a></li>
+				<li><a class="humans" href="#">Humans</a></li>
+				<li><a class="campaigns" href="#">Campaigns</a></li>
+				<li><a class="events" href="#">Events</a></li>
+			</ul>
+		</nav>
+	</div>
+</header>
+<header id="mobileMast" class="hidden-md-up">
+	<div class="row ml-0 mr-0">
+		<div class="col-3 text-left">
+			<i class="ion ion-md-menu"></i>
+		</div>
+		<div class="col-6 text-center">
+			Chaaipani
+		</div>
+		<div class="col-3 text-right">
+			<i class="ion ion-md-share"></i>
+		</div>
+	</div>
+</header>
+<main id="content">
+	<article>
+		<header class="mb-4 mt-4">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-10 push-md-1">
+						<span class="kicker">Impact</span>
+						<h1>For Infosys, blockchain and AI are opening new doors in India’s digital payments market</h1>
+					</div>
+				</div>
+			</div>
+		</header>
+		<div class="article-hero-image" style="background-image: url(https://qzprod.files.wordpress.com/2017/07/rts127xm-e1499145361879.jpg?quality=80&strip=all&w=1600);"></div>
+		<div class="container mt-4">
+			<div class="row">
+				<div class="col-md-3 push-md-1 entry-sidebar mb-2">
+					<div class="fixed-on-scroll">
+						<div class="row">
+							<div class="col-6 col-md-12">
+								<p>
+									Written by<br>
+									<strong>Anand Chowdhary</strong>
+								</p>
+							</div>
+							<div class="col-6 col-md-12">
+								<p>
+									Published on<br>
+									<strong>January 2, 2017</strong>
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="entry-content col-md-7 push-md-1">
+					<p>Technology is set to redefine banking in India.</p> <p>Digital payments are rapidly disrupting the cash-friendly nation’s spending habits. In an April 2017 global survey on internet security and trust, a <a href="https://qz.com/970679/indians-have-a-staggering-amount-of-trust-in-online-shopping-and-payments/">whooping 86% of Indians</a> said they would likely use mobile payments over the next year, well above the world average of 57%. By 2020, Asia’s third-largest economy is poised to have a $500 billion digital payments market, contributing to <a href="https://qz.com/741098/smartphone-crazy-indians-to-give-a-10x-boost-to-digital-payment-industry-in-next-four-years/">15% of the country’s GDP</a>.</p> <p>And IT giant Infosys is at the forefront of this change. Since 1999, <a href="https://www.edgeverve.com/finacle/" target="_blank" rel="noopener">Finacle</a>, a digital banking platform run by its wholly-owned subsidiary, EdgeVerve Systems, has been providing bank database management systems to various financial institutions. Today, close to <a href="https://www.infosys.com/newsroom/press-releases/Pages/payments-small-finance-banks.aspx">70% of India’s top 40 banks </a>and <a href="http://tech.economictimes.indiatimes.com/news/internet/infosys-finacle-launches-solutions-for-small-finance-payments-banks/48774089" target="_blank" rel="noopener">over 100 cooperative banks</a> use Finacle’s banking platform to manage their IT infrastructure and applications. As of last June, Paytm, India’s largest e-wallet with over 225 million customers, has <a href="https://www.infosys.com/newsroom/press-releases/Pages/payment-bank-business-solutions.aspx">been using</a> Finacle for its payments bank business. And even non-banking entities, such as <a href="https://www.infosys.com/newsroom/features/Pages/telecom-mobile-wallet-service.aspx">telecom company Airtel</a>, are partnering with Finacle to help customers go cash-free.</p> <p>Quartz spoke to Rajashekara Maiya, the associate vice-president and head of product strategy at the company, about the road ahead for digital payments in India.</p> <p>Edited excerpts:</p> <p><strong>With digital payments <a href="http://www.huffingtonpost.in/2017/01/18/cash-is-back-digital-transactions-slow-down-report_a_21657240/" target="_blank" rel="noopener">slowing down</a> as cash has gradually come back into the economy after demonetisation, has the sector peaked?<br></strong></p> <p><strong>Sure, but by when will it happen?</strong></p> <p>The government has given enough guidance and infrastructure. This kind of infrastructure is unheard of in any other part of the globe: The <a href="https://pmjdy.gov.in/">Jan Dhan</a>, <a href="https://qz.com/933907/paul-romer-on-aadhaar-world-banks-top-economist-says-indias-controversial-id-program-should-be-a-model-for-other-nations/">the Aadhaar</a>…small traders and vendors who make digital payments <a href="https://yourstory.com/2016/12/govt-reduces-tax-for-small-traders-on-digital-transactions/">can claim tax breaks</a>, some can claim some subsidy. The incentivisation and infrastructure will bring the cost down per transaction. The government has (also) <a href="http://www.news18.com/news/tech/trai-recommends-providing-100-mb-free-data-every-month-to-rural-users-2-1325039.html">given the mandate</a> to the department of telecom that by the next one year, (it must) set aside and provide free data—<a href="https://yourstory.com/2016/12/trai-data-rural-consumers/">100mb per month</a> per user.</p> <p><strong>Security is an important concern. What technologies can make digital transactions more secure?</strong></p> <p><strong>Is that just a theoretical solution or is Finacle deploying blockchain technology for transactions already?</strong></p> <p>Finacle has spoken to many academics who’ve conducted fundamental research in blockchain (and) Silicon Valley startup companies. It helps us in terms of changing the paradigm of payments—especially cross-border payments—and the digital identity of a customer. We’ve trained around 40 of our staff, who we call the “blockchain black bench,” to use their knowledge to create solutions. (The group)<strong> </strong>was launched by Infosys in April 2016. In October 2016, one UAE bank called Emirates NDB and India’s ICICI bank were part of <a href="https://www.icicibank.com/aboutus/article.page?identifier=news-icici-bank-executes-indias-first-banking-transactions-on-blockchain-in-partnership-with-emirates-nbd-20161210162515562">the first pilot (test) using blockchain</a> for cross-border payments. Since then, we’ve on-boarded 16-plus banks across Australia, Asia, Europe, and the US on this network.</p> <blockquote><p>“If players are being picked to represent a kabbadi team, I’ll make it to the team but I won’t stand out as a performer. For some reason, maybe I am not that good a player. That’s the curse, isn’t it? Making it to the team but not being good enough.”</p></blockquote> <p><strong>With automation picking up in the banking sector, and the scope of blockchain weeding out the middlemen (namely banks), is there still room for human jobs in the sector?</strong></p> <p>AI and <strong>machine learning</strong> have been around since Alan Turing made the super-computer in the 1950s but the application of that has not really taken off the way we’ve been seeing in the last two to three years. However, machines manage repetitive tasks. For example, I go into an ATM and ask for Rs5,000—I never count notes from the machine. Instead, if I go and draw in front of a teller, my tendency is to count it because we feel there’s a possibility of human error. AI augments services and capabilities beyond what used to be manual and (processes) become much more cheaper, more efficient. It is elevating one’s knowledge and skill sets. But it has undefined and unlimited capabilities. It’s about how you leverage that. Like, we build algorithms to prevent fraud; they’re good at picking up patterns and behaviors, pinpointing among the millions of transactions happening, but they need the support of human intelligence to take the right decision (thereafter).</p>
+				</div>
+			</div>
+		</div>
+	</article>
+</main>
+<nav id="bottombar" class="hidden-md-up">
+	<div class="row text-center ml-0 mr-0">
+		<div class="col">
+			<i class="ion ion-md-search"></i>
+			<div><span>Search</span></div>
+		</div>
+		<div class="col">
+			<i class="ion ion-md-list"></i>
+			<div><span>Sections</span></div>
+		</div>
+		<div class="col">
+			<i class="ion ion-md-trending-up"></i>
+			<div><span>Trending</span></div>
+		</div>
+		<div class="col">
+			<i class="ion ion-md-person"></i>
+			<div><span>Profile</span></div>
+		</div>
+	</div>
+</nav>
+<script>!function(t){"function"==typeof define&&define.amd?define(["jquery"],t):"object"==typeof module&&module.exports?module.exports=t(require("jquery")):t(jQuery)}(function(t){var e=Array.prototype.slice,i=Array.prototype.splice,n={topSpacing:0,bottomSpacing:0,className:"is-sticky",wrapperClassName:"sticky-wrapper",center:!1,getWidthFrom:"",widthFromWrapper:!0,responsiveWidth:!1,zIndex:"inherit"},r=t(window),s=t(document),o=[],c=r.height(),a=function(){for(var e=r.scrollTop(),i=s.height(),n=i-c,a=e>n?n-e:0,p=0,d=o.length;d>p;p++){var l=o[p],u=l.stickyWrapper.offset().top,h=u-l.topSpacing-a;if(l.stickyWrapper.css("height",l.stickyElement.outerHeight()),h>=e)null!==l.currentTop&&(l.stickyElement.css({width:"",position:"",top:"","z-index":""}),l.stickyElement.parent().removeClass(l.className),l.stickyElement.trigger("sticky-end",[l]),l.currentTop=null);else{var g=i-l.stickyElement.outerHeight()-l.topSpacing-l.bottomSpacing-e-a;if(0>g?g+=l.topSpacing:g=l.topSpacing,l.currentTop!==g){var m;l.getWidthFrom?(padding=l.stickyElement.innerWidth()-l.stickyElement.width(),m=t(l.getWidthFrom).width()-padding||null):l.widthFromWrapper&&(m=l.stickyWrapper.width()),null==m&&(m=l.stickyElement.width()),l.stickyElement.css("width",m).css("position","fixed").css("top",g).css("z-index",l.zIndex),l.stickyElement.parent().addClass(l.className),null===l.currentTop?l.stickyElement.trigger("sticky-start",[l]):l.stickyElement.trigger("sticky-update",[l]),l.currentTop===l.topSpacing&&l.currentTop>g||null===l.currentTop&&g<l.topSpacing?l.stickyElement.trigger("sticky-bottom-reached",[l]):null!==l.currentTop&&g===l.topSpacing&&l.currentTop<g&&l.stickyElement.trigger("sticky-bottom-unreached",[l]),l.currentTop=g}var y=l.stickyWrapper.parent(),f=l.stickyElement.offset().top+l.stickyElement.outerHeight()>=y.offset().top+y.outerHeight()&&l.stickyElement.offset().top<=l.topSpacing;f?l.stickyElement.css("position","absolute").css("top","").css("bottom",0).css("z-index",""):l.stickyElement.css("position","fixed").css("top",g).css("bottom","").css("z-index",l.zIndex)}}},p=function(){c=r.height();for(var e=0,i=o.length;i>e;e++){var n=o[e],s=null;n.getWidthFrom?n.responsiveWidth&&(s=t(n.getWidthFrom).width()):n.widthFromWrapper&&(s=n.stickyWrapper.width()),null!=s&&n.stickyElement.css("width",s)}},d={init:function(e){return this.each(function(){var i=t.extend({},n,e),r=t(this),s=r.attr("id"),c=s?s+"-"+n.wrapperClassName:n.wrapperClassName,a=t("<div></div>").attr("id",c).addClass(i.wrapperClassName);r.wrapAll(function(){return 0==t(this).parent("#"+c).length?a:void 0});var p=r.parent();i.center&&p.css({width:r.outerWidth(),marginLeft:"auto",marginRight:"auto"}),"right"===r.css("float")&&r.css({"float":"none"}).parent().css({"float":"right"}),i.stickyElement=r,i.stickyWrapper=p,i.currentTop=null,o.push(i),d.setWrapperHeight(this),d.setupChangeListeners(this)})},setWrapperHeight:function(e){var i=t(e),n=i.parent();n&&n.css("height",i.outerHeight())},setupChangeListeners:function(t){if(window.MutationObserver){var e=new window.MutationObserver(function(e){(e[0].addedNodes.length||e[0].removedNodes.length)&&d.setWrapperHeight(t)});e.observe(t,{subtree:!0,childList:!0})}else window.addEventListener?(t.addEventListener("DOMNodeInserted",function(){d.setWrapperHeight(t)},!1),t.addEventListener("DOMNodeRemoved",function(){d.setWrapperHeight(t)},!1)):window.attachEvent&&(t.attachEvent("onDOMNodeInserted",function(){d.setWrapperHeight(t)}),t.attachEvent("onDOMNodeRemoved",function(){d.setWrapperHeight(t)}))},update:a,unstick:function(e){return this.each(function(){for(var e=this,n=t(e),r=-1,s=o.length;s-->0;)o[s].stickyElement.get(0)===e&&(i.call(o,s,1),r=s);-1!==r&&(n.unwrap(),n.css({width:"",position:"",top:"","float":"","z-index":""}))})}};window.addEventListener?(window.addEventListener("scroll",a,!1),window.addEventListener("resize",p,!1)):window.attachEvent&&(window.attachEvent("onscroll",a),window.attachEvent("onresize",p)),t.fn.sticky=function(i){return d[i]?d[i].apply(this,e.call(arguments,1)):"object"!=typeof i&&i?void t.error("Method "+i+" does not exist on jQuery.sticky"):d.init.apply(this,arguments)},t.fn.unstick=function(i){return d[i]?d[i].apply(this,e.call(arguments,1)):"object"!=typeof i&&i?void t.error("Method "+i+" does not exist on jQuery.sticky"):d.unstick.apply(this,arguments)},t(function(){setTimeout(a,0)})}),$(document).ready(function(){$(".fixed-on-scroll").sticky({topSpacing:20,bottomSpacing:0})});</script>
